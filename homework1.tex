@@ -1,0 +1,84 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath, amsthm, pgfplots}
+
+\newtheoremstyle{break}
+  {10pt}%
+  {10pt}%
+  {\itshape}%
+  {6pt}%
+  {\bfseries}%
+  {\newline}%
+  {10pt}%
+  {}%
+\theoremstyle{break}
+\newtheorem{exr}{Exercise}
+
+\begin{document}
+\bibliographystyle{amsplain}
+\title[HW 1]{Home Work 1}
+\author[QI]{QI WANG}
+%\email{qiwa3476@colorado.edu}
+\date{\today}
+\maketitle
+
+\begin{exr}[\# 2]
+\ 
+\begin{center}
+\{$..., -4, -1, 2, 5, 8, ...$\}
+\end{center}
+\end{exr}
+
+\begin{exr}[\# 8]
+\ 
+\begin{center}
+\{$0, -2, -3$\}
+\end{center}
+\end{exr}
+
+\begin{exr}[\# 18]
+\ 
+\begin{center}
+\{ $x^2 : x = 2n$ where $n \in \mathbb Z_{\ge 0}$ \}
+\end{center}
+\end{exr}
+
+\begin{exr}[\# 30]
+\ 
+\begin{center}
+5.
+\end{center}
+\end{exr}
+
+\begin{exr}[\# 38]
+\ 
+\begin{center}
+$5x \leq 20$ \\*
+$x \leq 4$ \\*
+$x=1,2,3,4$ \\*
+\{$1, 2, 3, 4$\} \\*
+$cardinality = 4$
+\end{center}
+\end{exr}
+
+\begin{exr}[\# 40]
+\ \newline
+\begin{tikzpicture}
+\begin{axis} [
+	axis lines=left,
+	xlabel=$x$,
+	ylabel=$y$,
+	xmin=0, xmax=3,
+	ymin=0, ymax=3,
+	xtick={0, 1, 2, 3},
+	ytick={0, 1, 2, 3}
+]
+\addplot[
+	only marks,
+	color=blue,
+	mark=square,
+]
+coordinates {(0,1)(0,2)(1,1)(1,2)};
+\end{axis}
+\end{tikzpicture}
+\end{exr}
+\end{document}

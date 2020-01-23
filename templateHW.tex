@@ -1,0 +1,296 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT CLASS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{amsart}
+%\documentclass[draft, 12pt]{amsart}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STANDARD PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb,amsmath,amsthm,amscd,mathrsfs,graphicx, color}
+\usepackage[cmtip,all,matrix,arrow,tips,curve]{xy}
+\usepackage[notref,notcite]{showkeys}
+%\usepackage[colorlinks]{hyperref}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks=true,citecolor=OliveGreen,linkcolor=BrickRed,urlcolor=BlueViolet}
+\usepackage[active]{srcltx}
+\usepackage{mathpazo}
+\usepackage{setspace}\doublespacing 
+%Double space, and make it easier for the grader to grade your homework.
+%\usepackage{fullpage} 
+%Use wide margins, and make it easier for the grader to grade your homework.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TIKZ FOR GRAPHING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz,pgfplots}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 		ANSWER BOXES 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \setlength\fboxsep{.3cm}
+\setlength\fboxrule{.05cm}
+
+\newcommand*{\boxedcolor}{red}
+\makeatletter
+\renewcommand{\boxed}[1]{\textcolor{\boxedcolor}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedred}[1]{\textcolor{red}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedblue}[1]{\textcolor{blue}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THEOREM ENVIRONMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\numberwithin{equation}{section}
+\newtheorem{teo}{Theorem}[section]
+\newtheorem{pro}[teo]{Proposition}
+\newtheorem{lem}[teo]{Lemma}
+\newtheorem{cor}[teo]{Corollary}
+\newtheorem{con}[teo]{Conjecture}
+\newtheorem{convention}[teo]{}
+
+
+
+\newtheorem{teoalpha}{Theorem}
+\renewcommand{\theteoalpha}{\Alph{teoalpha}}
+\newtheorem{proalpha}[teoalpha]{Proposition}
+\newtheorem{coralpha}[teoalpha]{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{dfn}[teo]{Definition}
+\newtheorem{exa}[teo]{Example}
+\newtheorem{que}[teo]{Question}
+
+\theoremstyle{remark}
+\newtheorem{rem}[teo]{Remark}
+\newtheorem{nte}[teo]{Note}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SOME CONDITIONALS FOR NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Declare a new conditional
+\newif\ifnotes
+\notestrue 	% Show details
+%\notesfalse 	% Exclude details
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\marg}[1]{\normalsize{{\color{red}\footnote{{\color{blue}#1}}}{\marginpar[\vskip -.3cm {\color{BrickRed}\hfill\thefootnote$\implies$}]{\vskip -.3cm{ \color{BrickRed}$\impliedby$\thefootnote}}}}}
+
+\newcommand{\qc}[1]{\marg{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\begin{document}
+
+\bibliographystyle{amsalpha}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% AUTHOR INFO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\author[Casalaina]{Sebastian Casalaina}
+\address{University of Colorado, Department of Mathematics,  Campus Box 395,
+Boulder, CO 80309-0395}
+\email{casa@math.colorado.edu}
+\date{\today}
+%\thanks{I would like to take this opportunity to thank my class for their support.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE AND ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Homework 1]{Homework 1 \\ \ \\  MATH 2001}
+
+\begin{abstract} 
+This is the first homework assignment.  The problems are from Hammack \cite[Ch.~1, \S 1.1]{H13}:
+\begin{itemize}
+
+\item \textbf{Chapter 1}  
+\textbf{Section 1}, Exercises:  2, 8, 18, 30, 38, 40.
+
+\end{itemize}
+\end{abstract}
+
+
+\maketitle
+
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOMEWORK ASSIGNMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 1.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Chapter 1 Section 1.1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Ch.1, \S 1.1,  Exercise 2}  Write the following set by listing its elements between braces: $\{3x+2:x\in \mathbb Z\}$.   
+
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 2] I worked with the entire class on this solution.
+\qc{You are encouraged to work together on homework assignments.  However, for each problem you must write your own solution, and, as I have done here,  you must indicate with whom you worked, and you must cite any resources you used in solving  the  problem.}
+
+$$
+\boxed{
+\{3x+2:x\in \mathbb Z\}=\{\ldots, -7, -4, -1, 2, 5, 8  \ldots \}.
+}
+$$
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 8 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.1, \S 1.1,  Exercise 8}  Write the following set by listing its elements between braces: 
+$\{x \in \mathbb R : x^3+5x^2=-6x\}$.   
+
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 8]
+This solution was provided by Professor Casalaina.  
+For $x\in \mathbb R$, we have
+\begin{align*}
+x^3+5x^2=-6x &\iff x^3+5x^2+6x=0\\
+& \iff x(x^2+5x+6)=0\\
+& \iff x(x+2)(x+3)=0\\
+& \iff x=0, \text{ or } x=-2, \text{ or } x=-3.
+\end{align*}
+Therefore, 
+$$
+\boxed{
+\{x \in \mathbb R : x^3+5x^2=-6x\}= \{ 0, -2, -3\}.
+}
+$$
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 18 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.1, \S 1.1,  Exercise 18}  Write the following set in set-builder notation:
+$$
+\{0,4,16,36,64,100,\dots \}
+$$
+
+
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 18] This solution was provided by Professor Casalaina.  
+We note that for $n=0,\dots,5$, we have the following values for 
+$(2n)^2$:
+$$
+\begin{array}{c|c}
+n& (2n)^2\\ \hline
+0& 0 \\
+1& 4\\
+2& 16\\
+3& 36\\
+4& 64\\
+5& 100\\
+\end{array}
+$$
+Since this agrees with the list we were given, we may write
+$$
+\boxed{
+\{0,4,16,36,64,100,\dots \}=\{(2n)^2: n\in \mathbb Z_{\ge 0}\},
+}
+$$
+where $\mathbb Z_{\ge 0}$ is the set of integers that are greater than or equal to zero.
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 30 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.1, \S 1.1,  Exercise 30} 
+
+
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 30]
+
+\end{proof}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 38 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.1, \S 1.1,  Exercise 38} 
+
+
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 38]
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.1, \S 1.1,  Exercise 40} 
+ Sketch the following set of points in the $x,y$-plane:
+$$
+S=\{(x,y): x\in [0,1], \ y\in 1,2]\}
+$$
+
+
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 40]
+\ 
+For this problem I first sketched my own solution by hand.  However, to implement my solution in \LaTeX, I  modifed the tikz code from the webpage: 
+\\ 
+\url{https://tex.stackexchange.com/questions/140312/tikz-shading-region-bounded-by-several-curves}
+\begin{center}
+\begin{tikzpicture}
+%graph
+\draw[draw=gray!50!white,fill=gray!50!white] 
+    plot[smooth,samples=100,domain=0:1] (\x,{1}) -- 
+    plot[smooth,samples=100,domain=1:0] (\x,{2});
+\draw[domain=0:4] plot (\x,{1});
+\draw[domain=0:4] plot (\x,{2});
+\draw (1,0)--(1,2.5);
+%coordinate grid
+\draw (-.5,0)--(4.5,0) node[right]{$x$};
+\draw (0,-1.5)--(0,2.5) node[above]{$y$};
+\foreach \x in {1,2,3,4}
+    \draw (\x,2pt)--(\x,-2pt) node[below] {$\x$};
+\foreach \y/\ytext in {1,2}
+    \draw (2pt,\y)--(-2pt,\y) node[left] {$\y$};    
+%labels 
+\node at (.5,1.5) {$S$};
+\end{tikzpicture}
+\end{center}
+
+\end{proof}
+
+
+
+
+
+\ifnotes
+
+
+\else
+	This is not the full version.  This can be useful if there is scratch work you want to keep for yourself, but you do not want other people to see. 
+\fi
+
+
+
+
+\bibliography{templateHW}
+\end{document}
