@@ -196,14 +196,16 @@ It is true.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 30 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection*{Ch.2, \S 2.2,  Exercise 2}  Express each statement or open sentence in one of the forms $ $, $ $, or $ $. Be sure to also state what statements $ $ and $ $ stand for.
+\subsection*{Ch.2, \S 2.2,  Exercise 2}  Express each statement or open sentence in one of the forms $ \textit{P} \lor \textit{Q} $, $ \textit{P} \land \textit{Q} $, or $ \lnot \textit{P} $. Be sure to also state what statements $ \textit{P} $ and $ \textit{Q} $ stand for: "The matrix A is not invertible."
+
 
 
 \begin{proof}[Solution to Ch.2, \S 2.2,  Exercise 2]
 \ \\
 
 \begin{center}
-$ \textit{P} : $ The matrix A is not invertible
+$ \textit{P} : $ The matrix A is invertible. \\
+$ \lnot \textit{P} $
 \end{center}
 
 \end{proof}
@@ -213,11 +215,18 @@ $ \textit{P} : $ The matrix A is not invertible
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 38 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection*{Ch.1, \S 1.1,  Exercise 38} 
+\subsection*{Ch.2, \S 2.2,  Exercise 6}   Express each statement or open sentence in one of the forms $ \textit{P} \lor \textit{Q} $, $ \textit{P} \land \textit{Q} $, or $ \lnot \textit{P} $. Be sure to also state what statements $ \textit{P} $ and $ \textit{Q} $ stand for: "There is a quiz scheduled for Wednesday or Friday."
 
 
 
-\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 38]
+\begin{proof}[Solution to Ch.2, \S 2.2,  Exercise 6]
+\ \\
+
+\begin{center}
+$ \textit{P} $: There is a quiz scheduled for Wednesday. \\
+$ \textit{Q} $: There is a quiz scheduled for Friday. \\
+$ \textit{P} \land \textit{Q} $
+\end{center}
 
 \end{proof}
 
@@ -225,38 +234,49 @@ $ \textit{P} : $ The matrix A is not invertible
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection*{Ch.1, \S 1.1,  Exercise 40} 
- Sketch the following set of points in the $x,y$-plane:
-$$
-S=\{(x,y): x\in [0,1], \ y\in 1,2]\}
-$$
+\subsection*{Ch.2, \S 2.3,  Exercise 8}  Without changing their meanings, convert each of the following sentences into sentence having the form "$ \textit{ If P, then Q } $": "A geometric series with ratio $ \textit{r} $ converges if $ | \textit{r} | < 1 $."S
 
 
-
-\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 40]
+\begin{proof}[Solution to Ch.2, \S 2.2,  Exercise 8]
 \ 
-For this problem I first sketched my own solution by hand.  However, to implement my solution in \LaTeX, I  modifed the tikz code from the webpage: 
 \\ 
-\url{https://tex.stackexchange.com/questions/140312/tikz-shading-region-bounded-by-several-curves}
+
 \begin{center}
-\begin{tikzpicture}
-%graph
-\draw[draw=gray!50!white,fill=gray!50!white] 
-    plot[smooth,samples=100,domain=0:1] (\x,{1}) -- 
-    plot[smooth,samples=100,domain=1:0] (\x,{2});
-\draw[domain=0:4] plot (\x,{1});
-\draw[domain=0:4] plot (\x,{2});
-\draw (1,0)--(1,2.5);
-%coordinate grid
-\draw (-.5,0)--(4.5,0) node[right]{$x$};
-\draw (0,-1.5)--(0,2.5) node[above]{$y$};
-\foreach \x in {1,2,3,4}
-    \draw (\x,2pt)--(\x,-2pt) node[below] {$\x$};
-\foreach \y/\ytext in {1,2}
-    \draw (2pt,\y)--(-2pt,\y) node[left] {$\y$};    
-%labels 
-\node at (.5,1.5) {$S$};
-\end{tikzpicture}
+If $ | \textit{r} | < 1 $, then the geometric series with ratio $ \textit{r} $ converges.
+\end{center}
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.2, \S 2.3,  Exercise 8}  Without changing their meanings, convert each of the following sentences into sentence having the form "$ \textit{ If P, then Q } $": "The discriminant is negative only if the quadratic equation has no real solutions."
+
+
+\begin{proof}[Solution to Ch.2, \S 2.2,  Exercise 8]
+\ 
+\\ 
+
+\begin{center}
+If the discriminant is negative, then the quadratic equation has no real solutions.
+\end{center}
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.2, \S 2.3,  Exercise 8}  Without changing their meanings, convert each of the following sentences into sentence having the form "$ \textit{ P if and only if Q } $": "If $ \textit{a} \in \mathbb{Q} $ then $ 5 \textit{a} \in \mathbb{Q} $, and if $ 5 \textit{a} \in \mathbb{Q} $ then $ \textit{a} \in \mathbb{Q} $. "
+
+
+\begin{proof}[Solution to Ch.2, \S 2.2,  Exercise 8]
+\ 
+\\ 
+
+\begin{center}
+$ \textit{a} \in \mathbb{Q} $ if and only if $ 5 \textit{a} \in \mathbb{Q} $.
 \end{center}
 
 \end{proof}
