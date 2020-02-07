@@ -2,6 +2,6 @@
 \contentsline {subsection}{\tocsubsection {}{}{Ch.2, \S 2.1, Exercise 2}}{2}{section*.3}% 
 \contentsline {subsection}{\tocsubsection {}{}{Ch.2, \S 2.1, Exercise 4}}{2}{section*.4}% 
 \contentsline {subsection}{\tocsubsection {}{}{Ch.2, \S 2.1, Exercise 6}}{2}{section*.5}% 
-\contentsline {subsection}{\tocsubsection {}{}{Ch.1, \S 1.1, Exercise 30}}{3}{section*.6}% 
+\contentsline {subsection}{\tocsubsection {}{}{Ch.2, \S 2.2, Exercise 2}}{3}{section*.6}% 
 \contentsline {subsection}{\tocsubsection {}{}{Ch.1, \S 1.1, Exercise 38}}{3}{section*.7}% 
 \contentsline {subsection}{\tocsubsection {}{}{Ch.1, \S 1.1, Exercise 40}}{3}{section*.8}% 
