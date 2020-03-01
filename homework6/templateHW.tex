@@ -1,0 +1,298 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT CLASS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{amsart}
+%\documentclass[draft, 12pt]{amsart}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STANDARD PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb,amsmath,amsthm,amscd,mathrsfs,graphicx, color}
+\usepackage[cmtip,all,matrix,arrow,tips,curve]{xy}
+\usepackage[notref,notcite]{showkeys}
+%\usepackage[colorlinks]{hyperref}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks=true,citecolor=OliveGreen,linkcolor=BrickRed,urlcolor=BlueViolet}
+\usepackage[active]{srcltx}
+\usepackage{mathpazo}
+\usepackage{setspace}\doublespacing 
+%Double space, and make it easier for the grader to grade your homework.
+%\usepackage{fullpage} 
+%Use wide margins, and make it easier for the grader to grade your homework.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TIKZ FOR GRAPHING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz,pgfplots}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 		ANSWER BOXES 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \setlength\fboxsep{.3cm}
+\setlength\fboxrule{.05cm}
+
+\newcommand*{\boxedcolor}{red}
+\makeatletter
+\renewcommand{\boxed}[1]{\textcolor{\boxedcolor}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedred}[1]{\textcolor{red}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedblue}[1]{\textcolor{blue}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THEOREM ENVIRONMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\numberwithin{equation}{section}
+\newtheorem{teo}{Theorem}[section]
+\newtheorem{pro}[teo]{Proposition}
+\newtheorem{lem}[teo]{Lemma}
+\newtheorem{cor}[teo]{Corollary}
+\newtheorem{con}[teo]{Conjecture}
+\newtheorem{convention}[teo]{}
+
+
+
+\newtheorem{teoalpha}{Theorem}
+\renewcommand{\theteoalpha}{\Alph{teoalpha}}
+\newtheorem{proalpha}[teoalpha]{Proposition}
+\newtheorem{coralpha}[teoalpha]{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{dfn}[teo]{Definition}
+\newtheorem{exa}[teo]{Example}
+\newtheorem{que}[teo]{Question}
+
+\theoremstyle{remark}
+\newtheorem{rem}[teo]{Remark}
+\newtheorem{nte}[teo]{Note}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SOME CONDITIONALS FOR NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Declare a new conditional
+\newif\ifnotes
+\notestrue 	% Show details
+%\notesfalse 	% Exclude details
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\marg}[1]{\normalsize{{\color{red}\footnote{{\color{blue}#1}}}{\marginpar[\vskip -.3cm {\color{BrickRed}\hfill\thefootnote$\implies$}]{\vskip -.3cm{ \color{BrickRed}$\impliedby$\thefootnote}}}}}
+
+\newcommand{\qc}[1]{\marg{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\begin{document}
+
+\bibliographystyle{amsalpha}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% AUTHOR INFO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\author[Casalaina]{Sebastian Casalaina}
+\address{University of Colorado, Department of Mathematics,  Campus Box 395,
+Boulder, CO 80309-0395}
+\email{casa@math.colorado.edu}
+\date{\today}
+%\thanks{I would like to take this opportunity to thank my class for their support.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE AND ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Homework 1]{Homework 1 \\ \ \\  MATH 2001}
+
+\begin{abstract} 
+This is the first homework assignment.  The problems are from Hammack \cite[Ch.~1, \S 1.1]{H13}:
+\begin{itemize}
+
+\item \textbf{Chapter 2}  
+\textbf{Section 2.9}, Exercises:  2, 3, 4, 5.
+\textbf{Section 2.10}, Exercises:  2, 4, 10.
+\textbf{Section 4}, Exercises:  1, 2, 5, 7, 9.
+
+\end{itemize}
+\end{abstract}
+
+
+\maketitle
+
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOMEWORK ASSIGNMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 1.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Chapter 2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Ch.2, \S 2.9,  Exercise 2, 3, 4, 5}
+Translate each of the following sentences into symbolic logic.
+
+\begin{enumerate}
+
+\item[2.]
+The number x is positive but the number y is not positive.
+
+\item[3.]
+If x is prime, then $ \sqrt{x} $ is not a rational number.
+
+\item[4.]
+For every prime number p there is another prime number q with q > p.
+
+\item[5.]
+For every positive number $ \varepsilon $, there is a positive number $ \delta $ for which $ |x - a| < \delta $ implies $ |f(x)-f(a)| < \varepsilon $.
+
+\end{enumerate}
+
+
+\begin{proof}[Solution to Ch.2, \S 2.9,  Exercise 2, 3, 4, 5] \ \\
+
+\begin{center}
+
+\item[2.]
+(x is positive) $ \land $ (y is not positive)
+
+\item[3.]
+(x is prime) $ \implies $ ($ \sqrt{x} $ is not prime)
+
+\item[4.]
+$ \exists q \in \textbf{primes} $, ($ \forall p \in \textbf{primes}, q > p $)
+
+\item[5.]
+$ \exists \delta, (\delta > 0) \land [\forall \varepsilon, ((\varepsilon > 0) \land (|x-\alpha| < \delta)) \implies (f(x)-f(a)| < \varepsilon] $
+
+\end{center}
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 8 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.2, \S 2.10,  Exercise 2, 4, 10}
+Negate the following sentences.
+
+\begin{enumerate}
+
+\item[2.]
+If x is prime, then $ \sqrt{x} $ is not a rational number.
+
+\item[4.]
+For every positive number $ \varepsilon $, there is a positive number $ \delta $ such that $ |x-a| < \delta $ implies $ |f(x)-f(a)| < \varepsilon $.
+
+\item[10.]
+If $ f $ is a polynomial and its degree is greeter than 2, then $ f' $ is not constant.
+
+\end{enumerate}
+
+
+\begin{proof}[Solution to Ch.2, \S 2.10,  Exercise 2, 4, 10] \ \\
+
+\begin{center}
+
+\begin{enumerate}
+
+\item[2.]
+x is prime, $ \sqrt{x} $ is a rational number.
+
+\item[4.]
+There is a positive number $ \varepsilon $, such that for all positive number $ \delta $, $ (|x-a| < \delta) \land (|f(x)-f(a)| \geq \varepsilon) $.
+
+\item[10.]
+$ f $ is a polynomial and it s degree is greeter than 2, $ f' $ is constant.
+
+
+\end{enumerate}
+
+\end{center}
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 18 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.4, \S 4,  Exercise 1}  Use the method of direct proof to prove the following statements: If x is an even integer, then $ x^2 $ is even.
+
+\begin{proof}[Solution to Ch.4, \S 4,  Exercise 1]  \ \\
+\textbf{Proposition}  If x is an even integer, then $ x^2 $ is even.\\
+\textit{Proof}. Suppose x is even. Then $ x = 2a $ for some $ a \in \mathbb{Z} $, by definition of an even number. Thus $ x^2 = 4a^2 = 2(2a^2) $, so $ x^2 = 2b $ where $ b = 2a^2 \in \mathbb{Z} $. Therefore $ x^2 $ is even, by definition of an even number.
+
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 30 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.4, \S 4,  Exercise 3}  Use the method of direct proof to prove the following statements: If $ a $ is an odd integer, then $ a^2 + 3a + 5 $ is odd.
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 30] \ \\
+\textbf{Proposition} If $ a $ is an odd integer, then $ a^2 + 3a + 5 $ is odd. \ \\
+\textit{Proof}. Suppose $ a $ is odd. Then $ a = 2b + 1 $ for some $ b \in \mathbb{Z} $, by definition of an odd number. Thus $ a^2 + 3a + 5 = 4b^2 + 10b + 9 = 2(2b^2 + 5b + 4) + 1 $, so $ a^2 + 3a + 5 = 2b + 1 $ where $ b = (2b^2 + 5b + 4) \in \mathbb{Z} $. Therefor $ a^2 + 3a + 5 $ is odd, by definition of an odd number.
+\end{proof}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 38 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.4, \S 4,  Exercise 5}  Use the method of direct proof to prove the following statements: Suppose $ x,y \in \mathbb{Z} $. If $ x $ is even, then $ xy $ is even.
+
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 38]\ \\
+\textbf{Proposition} Suppose $ x,y \in \mathbb{Z} $. If $ x $ is even, then $ xy $ is even.\ \\
+\textit{Proof}. x is even. Then $ x = 2a $ for some $ a \in \mathbb{Z} $, by definition of even numbers.\\
+\textbf{Case 1}. Suppose y is odd. Then $ y = 2b + 1 $ for some $ b \in \mathbb{Z} $, by definition of odd numbers. Thus $ x*y = 2a * (2b + 1) = 4ab + 2a = 2(2ab + a) $, so $ x*y = 2c $ where $ c = (2ab + a) \in \mathbb{Z} $. Therefor $ x*y $ is even, by definition of an even number.\\
+\textbf{Case 2}. Suppose y is even. Then $ y = 2d $ for some $ d \in \mathbb{Z} $, by definition of an even number. Thus $ x * y = 2a * 2d = 4ad = 2(2ad) $, so $ x * y = 2e $ where $ e = 2ad \in \mathbb{Z} $. Therefor $ x*y $ is even, by definition of an even number.\\
+Because $ y \in \mathbb{Z} $, y is either even or odd. In both cases, $ x*y $ is even.
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.4, \S 4,  Exercise 7} Use the method of direct proof to prove the following statements: Suppose $ a,b \in \mathbb{Z} $. If $ a | b $, then $ a^2 | b^2 $.
+
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 40] \ \\
+\textbf{Proposition} Suppose $ a,b \in \mathbb{Z} $. If $ a | b $, then $ a^2 | b^2 $.\ \\
+\textit{Proof} Suppose $ a | b $ where $ a, b \in \mathbb{Z} $. Then $ a = b * c $ for some $ c \in \mathbb{Z} $, by definition. Thus $ a^2 = (b * c)^2 = b^2 * c^2 $, so $ a^2 = b^2 * d $ where $ d = c^2 \in \mathbb{Z} $. There for $ a^2|b^2 $, by definition.
+
+
+\end{proof}
+
+
+
+\newpage
+
+\ifnotes
+
+
+\else
+	This is not the full version.  This can be useful if there is scratch work you want to keep for yourself, but you do not want other people to see. 
+\fi
+
+
+
+
+\bibliography{templateHW}
+\end{document}

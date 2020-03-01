@@ -1,0 +1,5 @@
+\contentsline {section}{\tocsection {}{}{Chapter 1 Section 1.1}}{1}{section*.2}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.2, \S 2.5, Exercise 4, 6, 8}}{1}{section*.3}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.2, \S 2.6, Exercise 4, 6}}{3}{section*.4}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.2, \S 2.7, Exercise 2, 4, 8}}{4}{section*.5}
+\contentsline {section}{\tocsection {}{}{References}}{6}{section*.6}

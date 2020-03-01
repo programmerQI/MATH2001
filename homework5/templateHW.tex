@@ -1,0 +1,324 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT CLASS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{amsart}
+%\documentclass[draft, 12pt]{amsart}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STANDARD PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb,amsmath,amsthm,amscd,mathrsfs,graphicx, color}
+\usepackage[cmtip,all,matrix,arrow,tips,curve]{xy}
+\usepackage[notref,notcite]{showkeys}
+%\usepackage[colorlinks]{hyperref}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks=true,citecolor=OliveGreen,linkcolor=BrickRed,urlcolor=BlueViolet}
+\usepackage[active]{srcltx}
+\usepackage{mathpazo}
+\usepackage{setspace}\doublespacing 
+%Double space, and make it easier for the grader to grade your homework.
+%\usepackage{fullpage} 
+%Use wide margins, and make it easier for the grader to grade your homework.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TIKZ FOR GRAPHING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz,pgfplots}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 		ANSWER BOXES 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \setlength\fboxsep{.3cm}
+\setlength\fboxrule{.05cm}
+
+\newcommand*{\boxedcolor}{red}
+\makeatletter
+\renewcommand{\boxed}[1]{\textcolor{\boxedcolor}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedred}[1]{\textcolor{red}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedblue}[1]{\textcolor{blue}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THEOREM ENVIRONMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\numberwithin{equation}{section}
+\newtheorem{teo}{Theorem}[section]
+\newtheorem{pro}[teo]{Proposition}
+\newtheorem{lem}[teo]{Lemma}
+\newtheorem{cor}[teo]{Corollary}
+\newtheorem{con}[teo]{Conjecture}
+\newtheorem{convention}[teo]{}
+
+
+
+\newtheorem{teoalpha}{Theorem}
+\renewcommand{\theteoalpha}{\Alph{teoalpha}}
+\newtheorem{proalpha}[teoalpha]{Proposition}
+\newtheorem{coralpha}[teoalpha]{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{dfn}[teo]{Definition}
+\newtheorem{exa}[teo]{Example}
+\newtheorem{que}[teo]{Question}
+
+\theoremstyle{remark}
+\newtheorem{rem}[teo]{Remark}
+\newtheorem{nte}[teo]{Note}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SOME CONDITIONALS FOR NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Declare a new conditional
+\newif\ifnotes
+\notestrue 	% Show details
+%\notesfalse 	% Exclude details
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\marg}[1]{\normalsize{{\color{red}\footnote{{\color{blue}#1}}}{\marginpar[\vskip -.3cm {\color{BrickRed}\hfill\thefootnote$\implies$}]{\vskip -.3cm{ \color{BrickRed}$\impliedby$\thefootnote}}}}}
+
+\newcommand{\qc}[1]{\marg{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\begin{document}
+
+\bibliographystyle{amsalpha}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% AUTHOR INFO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\author[QI]{QI WANG}
+\address{University of Colorado, Department of Mathematics,  Campus Box 395,
+Boulder, CO 80309-0395}
+\email{casa@math.colorado.edu}
+\date{\today}
+%\thanks{I would like to take this opportunity to thank my class for their support.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE AND ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Homework 5]{Homework 5 \\ \ \\  MATH 2001}
+
+\begin{abstract} 
+This is the first homework assignment.  The problems are from Hammack \cite[Ch.~2, \S 2.5]{H13}:
+\begin{itemize}
+
+\item \textbf{Chapter 2}  
+\textbf{Section 2.5}, Exercises:  4, 6, 8.
+\textbf{Section 2.6}, Exercises:  4, 6.
+\textbf{Section 2.7}, Exercises:  2, 4, 8.
+
+\end{itemize}
+\end{abstract}
+
+
+\maketitle
+
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOMEWORK ASSIGNMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 1.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Chapter 1 Section 1.1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Ch.2, \S 2.5,  Exercise 4, 6, 8}  Write a truth table for the logical statements.
+
+\begin{enumerate}
+
+\item[4.]
+$ \lnot (\textbf{\textit{P}} \lor \textbf{\textit{Q}}) \lor (\lnot \textbf{\textit{P}}) $
+
+\item[6.]
+$ (\textbf{\textit{P}} \land \lnot \textbf{\textit{P}}) \land \textbf{\textit{Q}} $
+
+\item[8.]
+$ \textbf{\textit{P}} \lor (\textbf{\textit{Q}} \land \lnot \textbf{\textit{R}}) $
+
+\end{enumerate}
+
+
+\begin{proof}[Solution to Ch.2, \S 2.5,  Exercise 4, 6, 8] \ \\
+
+\begin{enumerate}
+
+\item[4.]
+$ \lnot (\textbf{\textit{P}} \lor \textbf{\textit{Q}}) \lor (\lnot \textbf{\textit{P}}) $
+
+\begin{displaymath}
+\begin{array}{|c c c|c|c|c|}
+P & Q & \lnot P & P \lor Q & \lnot (P \lor Q) & \lnot (P \lor Q) \lor (\lnot P) \\
+T & T & F & T & F & F \\
+T & F & F & T & F & F \\
+F & T & T & T & F & T \\
+F & F & T & F & T & T
+\end{array}
+\end{displaymath}
+
+\item[6.]
+$ (\textbf{\textit{P}} \land \lnot \textbf{\textit{P}}) \land \textbf{\textit{Q}} $
+
+\begin{displaymath}
+\begin{array}{|c c c|c|c|}
+P & Q & \lnot P & P \land \lnot P & (P \land \lnot P) \land Q \\
+T & T & F & F & F \\
+T & F & F & F & F \\
+F & T & T & F & F \\
+F & F & T & F & F
+\end{array}
+\end{displaymath}
+
+\item[8.]
+$ \textbf{\textit{P}} \lor (\textbf{\textit{Q}} \land \lnot \textbf{\textit{R}}) $
+
+\begin{displaymath}
+\begin{array}{|c c c c|c|c|}
+P & Q & R & \lnot R & Q \land \lnot R & P \lor (Q \land \lnot R)\\
+T & T & T & F & F & T \\
+T & T & F & T & T & T \\
+T & F & T & F & F & T \\
+T & F & F & T & F & T \\
+F & T & T & F & F & F \\
+F & T & F & T & T & T \\
+F & F & T & F & F & F \\
+F & F & F & T & F & F \\
+\end{array}
+\end{displaymath}
+
+\end{enumerate}
+
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 8 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.2, \S 2.6,  Exercise 4, 6}  Use truth tables to show that the following statements are logically equivalent. 
+
+\begin{enumerate}
+
+\item[4.]
+$ \lnot (\textbf{\textit{P}} \lor \textbf{\textit{Q}}) = (\lnot \textbf{\textit{P}}) \land (\lnot \textbf{\textit{Q}}) $
+
+\item[6.]
+$ \lnot (\textbf{\textit{P}} \land \textbf{\textit{Q}} \land \textbf{\textit{R}}) = (\lnot \textbf{\textit{P}}) \lor (\lnot \textbf{\textit{Q}}) \lor (\lnot \textbf{\textit{R}}) $
+
+\end{enumerate}
+
+
+\begin{proof}[Solution to Ch.2, \S 2.6,  Exercise 4, 6] \ \\
+
+\begin{enumerate}
+
+\item[4.]
+$ \lnot (\textbf{\textit{P}} \lor \textbf{\textit{Q}}) = (\lnot \textbf{\textit{P}}) \land (\lnot \textbf{\textit{Q}}) $
+
+\begin{displaymath}
+\begin{array}{|c c|c c|c c|c|}
+P & Q & \lnot P & \lnot Q & (P \lor Q) & \lnot (P \lor Q) & (\lnot P) \land (\lnot Q) \\
+T & T & F & F & T & F & F \\
+T & F & F & T & T & F & F \\
+F & T & T & F & T & F & F \\
+F & F & T & T & F & T & T
+\end{array}
+\end{displaymath}
+
+\item[6.]
+$ \lnot (\textbf{\textit{P}} \land \textbf{\textit{Q}} \land \textbf{\textit{R}}) = (\lnot \textbf{\textit{P}}) \lor (\lnot \textbf{\textit{Q}}) \lor (\lnot \textbf{\textit{R}}) $
+
+\begin{displaymath}
+\begin{array}{|c c c|c c c|c c|c|}
+P & Q & R & \lnot P & \lnot Q & \lnot R & P \land Q \land R & \lnot (P \land Q \land R) & (\lnot P) \lor (\lnot Q) \lor (\lnot R) \\
+T & T & T & F & F & F & T & F & F \\
+T & T & F & F & F & T & F & T & T \\
+T & F & T & F & T & F & F & T & T \\
+T & F & F & F & T & T & F & T & T \\
+F & T & T & T & F & F & F & T & T \\
+F & T & F & T & F & T & F & T & T \\
+F & F & T & T & T & F & F & T & T \\
+F & F & F & T & T & T & F & T & T
+\end{array}
+\end{displaymath}
+
+\end{enumerate}
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 18 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.2, \S 2.7,  Exercise 2, 4, 8} Write the following as English sentences. Say weather they are true or false.
+
+\begin{enumerate}
+
+\item[2.]
+$ \forall x \in \mathbb{R}, \exists n \in \mathbb{N}, x^n \geq 0 $
+
+\item[4.]
+$ \forall \textbf{\textit{X}} \in \wp (\mathbb{N}), \textbf{\textit{X}} \subseteq \mathbb{R} $
+
+\item[8.]
+$ \forall n \in \mathbb{Z}, \exists \textbf{\textit{X}} \subseteq \mathbb{N}, |\textbf{\textit{X}}| = n $
+
+\end{enumerate}
+
+
+\begin{proof}[Solution to Ch.2, \S 2.7,  Exercise 18] \ \\
+
+\begin{enumerate}
+
+\item[2.]
+$ \forall x \in \mathbb{R}, \exists n \in \mathbb{N}, x^n \geq 0 $
+\ \\
+For all x in the $ \mathbb{R} $, there exists n in $ \mathbb{N} $ such that $ x^n $ is greater than and equal to 0. \textbf{TRUE}
+
+\item[4.]
+$ \forall \textbf{\textit{X}} \in \wp(\mathbb{N}), \textbf{\textit{X}} \subseteq \mathbb{R} $
+\ \\
+All X in $ \wp (\mathbb{N}) $ is subsets of $ \mathbb{R} $. \textbf{FALSE}
+
+\item[8.]
+$ \forall n \in \mathbb{Z}, \exists \textbf{\textit{X}} \subseteq \mathbb{N}, |\textbf{\textit{X}}| = n $
+\ \\
+For all n in the $ \mathbb{Z} $, there exists $ \textbf{\textit{X}} $ in $ \mathbb{N} $ such that $ |\textbf{\textit{X}}| = n$. \textbf{FALSE}
+
+\end{enumerate}
+
+\end{proof}
+
+\newpage
+
+\ifnotes
+
+
+\else
+	This is not the full version.  This can be useful if there is scratch work you want to keep for yourself, but you do not want other people to see. 
+\fi
+
+
+
+
+\bibliography{templateHW}
+\end{document}
