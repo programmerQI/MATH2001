@@ -1,0 +1,12 @@
+\contentsline {section}{\tocsection {}{}{Chapter 5}}{2}{section*.2}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 1}}{2}{section*.3}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 2}}{2}{section*.4}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 3}}{2}{section*.5}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 4}}{2}{section*.6}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 5}}{2}{section*.7}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 16}}{2}{section*.8}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 17}}{2}{section*.9}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 18}}{2}{section*.10}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 19}}{3}{section*.11}
+\contentsline {subsection}{\tocsubsection {}{}{Ch.5, Exercise 20}}{3}{section*.12}
+\contentsline {section}{\tocsection {}{}{References}}{3}{section*.13}
