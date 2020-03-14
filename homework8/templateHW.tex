@@ -1,0 +1,284 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT CLASS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{amsart}
+%\documentclass[draft, 12pt]{amsart}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STANDARD PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb,amsmath,amsthm,amscd,mathrsfs,graphicx, color}
+\usepackage[cmtip,all,matrix,arrow,tips,curve]{xy}
+\usepackage[notref,notcite]{showkeys}
+%\usepackage[colorlinks]{hyperref}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks=true,citecolor=OliveGreen,linkcolor=BrickRed,urlcolor=BlueViolet}
+\usepackage[active]{srcltx}
+\usepackage{mathpazo}
+\usepackage{setspace}\doublespacing 
+%Double space, and make it easier for the grader to grade your homework.
+%\usepackage{fullpage} 
+%Use wide margins, and make it easier for the grader to grade your homework.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TIKZ FOR GRAPHING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz,pgfplots}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 		ANSWER BOXES 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \setlength\fboxsep{.3cm}
+\setlength\fboxrule{.05cm}
+
+\newcommand*{\boxedcolor}{red}
+\makeatletter
+\renewcommand{\boxed}[1]{\textcolor{\boxedcolor}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedred}[1]{\textcolor{red}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedblue}[1]{\textcolor{blue}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THEOREM ENVIRONMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\numberwithin{equation}{section}
+\newtheorem{teo}{Theorem}[section]
+\newtheorem{pro}[teo]{Proposition}
+\newtheorem{lem}[teo]{Lemma}
+\newtheorem{cor}[teo]{Corollary}
+\newtheorem{con}[teo]{Conjecture}
+\newtheorem{convention}[teo]{}
+
+
+
+\newtheorem{teoalpha}{Theorem}
+\renewcommand{\theteoalpha}{\Alph{teoalpha}}
+\newtheorem{proalpha}[teoalpha]{Proposition}
+\newtheorem{coralpha}[teoalpha]{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{dfn}[teo]{Definition}
+\newtheorem{exa}[teo]{Example}
+\newtheorem{que}[teo]{Question}
+
+\theoremstyle{remark}
+\newtheorem{rem}[teo]{Remark}
+\newtheorem{nte}[teo]{Note}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SOME CONDITIONALS FOR NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Declare a new conditional
+\newif\ifnotes
+\notestrue 	% Show details
+%\notesfalse 	% Exclude details
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\marg}[1]{\normalsize{{\color{red}\footnote{{\color{blue}#1}}}{\marginpar[\vskip -.3cm {\color{BrickRed}\hfill\thefootnote$\implies$}]{\vskip -.3cm{ \color{BrickRed}$\impliedby$\thefootnote}}}}}
+
+\newcommand{\qc}[1]{\marg{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\begin{document}
+
+\bibliographystyle{amsalpha}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% AUTHOR INFO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\author[QI]{QI WANG}
+\address{University of Colorado, Department of Mathematics,  Campus Box 395,
+Boulder, CO 80309-0395}
+\email{casa@math.colorado.edu}
+\date{\today}
+%\thanks{I would like to take this opportunity to thank my class for their support.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE AND ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Homework 8]{Homework 8 \\ \ \\  MATH 2001}
+
+\begin{abstract} 
+This is the first homework assignment.  The problems are from Hammack \cite[Ch.~1, \S 1.1]{H13}:
+\begin{itemize}
+
+\item \textbf{Chapter 7}  
+Exercises:  19, 20, 21
+
+\item \textbf{Chapter 8}  
+Exercises:  2, 6, 10, 12, 14, 16, 18
+
+\end{itemize}
+\end{abstract}
+
+
+\maketitle
+
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOMEWORK ASSIGNMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 1.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Chapter 7}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Ch.7, Exercise 19}  If $ n \in \mathbb{Z} $, then $ 2^0 + 2^2  + 2^3 + \dots + 2^n = 2^{n+1} - 1 $.
+
+
+\begin{proof}[Solution to Ch.7, Exercise 19] 
+\ \\
+\textbf{Proposition} If $ n \in \mathbb{Z} $, then $ 2^0 + 2^2  + 2^3 + \dots + 2^n = 2^{n+1} - 1 $. \\
+\textit{Proof}: \\
+$ n = 0 $ : \ $ 2^0 = 2^1 - 1 = 1 $ \\
+$ n = 1 $ : \ $ 2^0 + 2^1 = 2^2 - 1 = 3 $ \\
+$ n = 2 $ : \ $ 2^0 + 2^1 + 2^2 = 2^3 - 1 = 7 $ \\
+\textit{Assume}: \\
+$ n = k - 1 $ : \ $ 2^0 + 2^1 + 2^2 + \dots + 2^{k - 1} = 2^k - 1 $ \\
+\textit{Induction Proof}: \\
+$ n = k $ : \ $ 2^0 + 2^1 + 2^2 + \dots + 2^{k - 1} + 2^k = 2^k - 1 + 2^k = 2^{k + 1} - 1 $
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 8 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.7, Exercise 20}  There exists an $ n \in \mathbb{N} $ for which $ 11 | (2^n - 1) $.
+
+\begin{proof}[Solution to Ch.7, Exercise 20]
+\ \\
+\textbf{Proposition} There exists an $ n \in \mathbb{N} $ for which $ 11 | (2^n - 1) $.\\
+\textit{Proof} (direct) \ Because zero divides by eleven equals to zero, we have $ 11 | 0 $. Let $ 2^n - 1 = 0 $, so we get $ n = 0 $. Thus, there exist an $ n $ when $ n = 0 $ for $ 11 | (2^n - 1) $.
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 18 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.8,  Exercise 2}  Prove that $ \{ 6n : n \in \mathbb{Z} \} = \{ 2n : n \in \mathbb{Z} \} \land \{ 3n : n \in \mathbb{Z} \} $.
+
+\begin{proof}[Solution to Ch.8, Exercise 2]
+\ \\
+\textbf{Proposition}  Prove that $ \{ 6n : n \in \mathbb{Z} \} = \{ 2n : n \in \mathbb{Z} \} \land \{ 3n : n \in \mathbb{Z} \} $. \\
+\textit{Proof}  \\
+\textbf{Step 1}: Suppose $ a \in \{ 6n : n \in \mathbb{Z} \} $, we have $ a = 6n = 2(3n) $. Thus $ a = 2(b) $ where $ b = 3n \in \mathbb{Z} $, so $ a \in \{ 2n : n \in \mathbb{Z} \} $. We also have $ a = 6n = 3(2n) $, so $ a = 3c $ where $ c = 2n \in \mathbb{Z} $. Thus $ a \in \{ 3n : n \in \mathbb{Z} \} $. Therefor $ \{ 6n : n \in \mathbb{Z} \} \subseteq \{ 2n : n \in \mathbb{Z} \} \land \{ 3n : n \in \mathbb{Z} \} $. \\
+\textbf{Step 2}: Suppose $ a \in \{ 2n : n \in \mathbb{Z} \} \land \{ 3n : n \in \mathbb{Z} \} $. Then, we have $ a = 2b $ and $ a = 3c $ where $ b, c \in \mathbb{Z} $. Thus $ 2 | a $ and $ 3 | a $, so $ (2 * 3) | a = 6 | a $.  Therefore $ a = 6d $ for $ d \in \mathbb{Z} $. Thus $ a \in \{ 6n : n \in \mathbb{Z} \} $, so $ \{ 2n : n \in \mathbb{Z} \} \land \{ 3n : n \in \mathbb{Z} \} \subseteq \{ 6n : n \in \mathbb{Z} \} $.
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 30 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.8,  Exercise 6}  Suppose $ x, y \in \mathbb{R} $. Then $ x^3 + x^2y = y^2 + xy $ if and only if $ y = x^2 $ or $ y = -x $.
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 30] 
+\ \\
+\textbf{Proposition} Suppose $ x, y \in \mathbb{R} $. Then $ x^3 + x^2y = y^2 + xy $ if and only if $ y = x^2 $ or $ y = -x $.\\
+\textit{Proof} Rearranging the equation $ x^3 + x^2y = y^2 + xy $, we get $ x^3 - xy = y^2 - x^2 y $. Thus $ x ( x^2 - y ) = y ( y - x^2 ) $, so we have $ x ( x^2 - y) = - y ( x^2 - y) $. Therefore we solve the equation get either $ y = x^2 $ or $ y = -x $.
+\end{proof}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 38 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.8, Exercise 10} If $ a \in \mathbb{Z} $, then $ a^3 \equiv a (mod 3) $.
+
+\begin{proof}[Solution to Ch.8, Exercise 12]
+\ \\
+\textbf{Proposition} If $ a \in \mathbb{Z} $, then $ a^3 \equiv a (mod \  3) $.\\
+\textit{Proof (proof by case)} \\
+\textbf{case 1:} \ Suppose $ a \equiv 1 (mod \ 3) $. We get $ a = 3n + 1, n \in \mathbb{Z} $. Thus $ a^3 = 27n^3 + 27n^2 + 9b + 1 = 3 (9b^3 + 9b^2 + 3b) + 1 $ where $ 9b^3 + 9b^2 + 3b \in \mathbb{Z} $, so $ a^3 \equiv 1 (mod \ 3) $. Therefor $ a^3 \equiv a (mod \ 3) $.\\
+\textbf{case 2:} \ Suppose $ a \equiv 2 (mod \ 3) $. We get $ a = 3n + 2, n \in \mathbb{Z} $. Thus $ a^3 = 27n^3 + 54n^2 + 36b + 8 = 3 (9b^3 + 18b^2 + 12b + 2) + 2 $ where $ 9b^3 + 18b^2 + 12b + 2 \in \mathbb{Z} $, so $ a^3 \equiv 2 (mod \ 3) $. Therefor $ a^3 \equiv a (mod \ 3) $.\\
+\textbf{case 3:} \ Suppose $ a \equiv 0 (mod \ 3) $. We get $ a = 3n, n \in \mathbb{Z} $. Thus $ a^3 = 27n^3 = 3 (9b^3) $ where $ 9b^3 \in \mathbb{Z} $, so $ a^3 \equiv 0 (mod \ 3) $. Therefor $ a^3 \equiv a (mod \ 3) $.\\
+For each case $ a^3 \equiv a (mod \ 3) $.
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.8, Exercise 12}  There exist a positive real number $ x $ for which $ x^2 < \sqrt{x} $.
+
+\begin{proof}[Solution to Ch.8, Exercise 12]
+\ \\
+\textbf{Proposition} There exist a positive real number $ x $ for which $ x^2 < \sqrt{x} $.
+\textit{Proof} Assume $ x = 0.25 $, then $ x^2 = 0.0625 $ and $ \sqrt{x} = 0.5 $.
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.8, Exercise 14}  Suppose $ a \in \mathbb{Z} $. Then $ a^2 | a $ if and only if $ a \in \{ -1, 0, 1 \} $.
+
+\begin{proof}[Solution to Ch.8, Exercise 14]
+\ \\
+\textbf{Proposition} Suppose $ a \in \mathbb{Z} $. Then $ a^2 | a $ if and only if $ a \in \{ -1, 0, 1 \} $. \\
+
+\textit{Proof} Assume $ a^2 | a $, we get $ a / a^2 = n $, where $ n \in \mathbb{Z} $. By solving the equation, we get $ a = 1, a = -1 $ or $ a = 0 $.
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.8, Exercise 16}  Suppose $ a, b \in \mathbb{Z} $. If $ ab $ is odd, then $ a^2 + b^2 $ is even.
+
+\begin{proof}[Solution to Ch.8, Exercise 16]
+\ \\
+\textbf{Proposition} Suppose $ a, b \in \mathbb{Z} $. If $ ab $ is odd, then $ a^2 + b^2 $ is even.\\
+\textit{Proof} Suppose $ a $ and $ b $ are odd. We have $ a = 2n + 1 $ and $ b = 2m + 1 $. Thus $ a^2 + b^2 = 4n^2 + 4n + 1 + 4m^2 + 4m + 1 = 2(2n^2 + 2n + 2m^2 + 2m + 1) $ where $ 2n^2 + 2n + 2m^2 + 2m + 1 \in \mathbb{Z} $. Therefore $ a^2 + b^2 $ is even.
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection*{Ch.8, Exercise 18}  There is a set $ X $ for which $ \mathbb{N} \in X $ and $ \mathbb{N} \subseteq X $.
+
+\begin{proof}[Solution to Ch.8, Exercise 18]
+\ \\
+\textbf{Proposition} There is a set $ X $ for which $ \mathbb{N} \in X $ and $ \mathbb{N} \subseteq X $.\\
+\textit{Proof} There is $ \wp \mathbb{N}$ which $ \mathbb{N} \in \wp \mathbb{N} $ and $ \mathbb{N} \subseteq \wp  \mathbb{N} $.
+
+\end{proof}
+
+\ifnotes
+
+
+\else
+	This is not the full version.  This can be useful if there is scratch work you want to keep for yourself, but you do not want other people to see. 
+\fi
+
+
+
+
+\bibliography{templateHW}
+\end{document}
