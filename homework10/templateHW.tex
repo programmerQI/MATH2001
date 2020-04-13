@@ -207,52 +207,18 @@ The $ f(x) $ is surjective and injective, so it is bijective.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 38 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection*{Ch.1, \S 1.1,  Exercise 38} 
+\subsection*{Ch.12, \S 12.3,  Exercise 1}  Prove that if six numbers are chosen at random, then at least two of them will have the same remainder when divided by 5.
 
-
-
-\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 38]
-
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 38] Suppose the set $ A $ that made of the remanders of any number $ n $ where $ n \in \mathbb{Z} $ divided by 5. Such a set contains the elements $ A = \{0, 1, 2, 3 ,4 \} $. Thus, we have $ |A| = 5 $. The set $ B $ consist six random numbers, so $ |\textit{B}| = 6 $. Consider the function $ f : B \rightarrow A $, such that $ f(x) = x \ mod \  5 $. Because $ |B| > |A| $, the function is not injective by pigeohole principle.
 \end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 40 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection*{Ch.1, \S 1.1,  Exercise 40} 
- Sketch the following set of points in the $x,y$-plane:
-$$
-S=\{(x,y): x\in [0,1], \ y\in 1,2]\}
-$$
+\subsection*{Ch.12, \S 12.3,  Exercise 2}  Prove that if $ a $ is a natural number, then there exist two unequal natural numbers $ k $ and $ l $ for which $ a^k - a^l $ is divisible by $ 10 $.
 
-
-
-\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 40]
-\ 
-For this problem I first sketched my own solution by hand.  However, to implement my solution in \LaTeX, I  modifed the tikz code from the webpage: 
-\\ 
-\url{https://tex.stackexchange.com/questions/140312/tikz-shading-region-bounded-by-several-curves}
-\begin{center}
-\begin{tikzpicture}
-%graph
-\draw[draw=gray!50!white,fill=gray!50!white] 
-    plot[smooth,samples=100,domain=0:1] (\x,{1}) -- 
-    plot[smooth,samples=100,domain=1:0] (\x,{2});
-\draw[domain=0:4] plot (\x,{1});
-\draw[domain=0:4] plot (\x,{2});
-\draw (1,0)--(1,2.5);
-%coordinate grid
-\draw (-.5,0)--(4.5,0) node[right]{$x$};
-\draw (0,-1.5)--(0,2.5) node[above]{$y$};
-\foreach \x in {1,2,3,4}
-    \draw (\x,2pt)--(\x,-2pt) node[below] {$\x$};
-\foreach \y/\ytext in {1,2}
-    \draw (2pt,\y)--(-2pt,\y) node[left] {$\y$};    
-%labels 
-\node at (.5,1.5) {$S$};
-\end{tikzpicture}
-\end{center}
-
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 40] Assume a set $ A = \{ x \in \mathbb{N} : x = a^n \} $ where $ a,n \in \mathbb{N} $. The $ a^k $ and $ a^l $ would be the two different elements of the set $ A $. Suppose the set $ B = \{ y \in \mathbb{N} : y = m \ mod \ 10 \} $, then $ |B| = 10 $. Consider a function $ f : A \rightarrow B $, such that $ f(z) = z \ mod \ 10 $. Based on pigeonhole princeple $ f $ is not injective, because $ |A| > |B| $. Therefor, there exist different $ k $ and $ l $, such that $ a^k \ mod \ 10 = a^l \ mod \ 10 $. Thus there exist $ (a^k - a^l) \div 10 = n $ where $ n \in \mathbb{N} $ based on definition.
 \end{proof}
 
 

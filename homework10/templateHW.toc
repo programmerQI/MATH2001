@@ -3,5 +3,5 @@
 \contentsline {subsection}{\tocsubsection {}{}{Ch.12, \S 12.1, Exercise 6}}{2}{section*.4}% 
 \contentsline {subsection}{\tocsubsection {}{}{Ch.12, \S 12.2, Exercise 5}}{3}{section*.5}% 
 \contentsline {subsection}{\tocsubsection {}{}{Ch.12, \S 12.2, Exercise 10}}{3}{section*.6}% 
-\contentsline {subsection}{\tocsubsection {}{}{Ch.1, \S 1.1, Exercise 38}}{4}{section*.7}% 
-\contentsline {subsection}{\tocsubsection {}{}{Ch.1, \S 1.1, Exercise 40}}{4}{section*.8}% 
+\contentsline {subsection}{\tocsubsection {}{}{Ch.12, \S 12.3, Exercise 1}}{4}{section*.7}% 
+\contentsline {subsection}{\tocsubsection {}{}{Ch.12, \S 12.3, Exercise 2}}{4}{section*.8}% 
