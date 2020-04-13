@@ -167,10 +167,10 @@ draw,processblue , text=blue , minimum width =1 cm}]
 \end{center}
 
 \begin{enumerate}
-\item[\textbf{1.}] The graph is not reflexive, because $ (a, a) \notin R $.
-\item[\textbf{2.}] The graph is not Symmetric, because $ (a, b) \in R \  and  \  (b, a) \notin R $.
+The graph is not reflexive, because $ (a, a) \notin R $. \\
+The graph is not Symmetric, because $ (a, b) \in R \  and  \  (b, a) \notin R $. \\
 \end{enumerate}
-The Graph is trasitive.
+The Graph is trasitive, because $ (a, c) \in R $, $ (c, b) \in R $ and $ (a, b) \in R $.
 
 \end{proof}
 
@@ -181,7 +181,7 @@ The Graph is trasitive.
 \subsection*{Ch.11, \S 11.1,  Exercise 6}  Consider the relation $ R = \{(x, x) : x \in \mathbb{Z} \} $ on $ \mathbb{Z} $. Is $ R $ reflexive? Symmetric? Transitive? If Property does not hold, say why.
 
 \begin{proof}[Solution to Ch.11, \S 11.1,  Exercise 6] \ \\
-The Graph is reflexive.\\
+The Graph is reflexive, because for every $ x \in Z $ there is a relation of $ (x, x) \in R $. \\
 The graph only contians self-to-self relations, so it is not transitive or symmetric.
 \end{proof}
 
@@ -192,9 +192,15 @@ The graph only contians self-to-self relations, so it is not transitive or symme
 \subsection*{Ch.11, \S 11.1,  Exercise 8}  Define a relation on $ \mathbb{Z} $ as $ x\textit{R}y $ if $ |x - y| < 1 $. Is $ R $ reflexive? Symmetric? Transitive?
 
 
-\begin{proof}[Solution to Ch.11, \S 11.1,  Exercise 18] \ \\
-The graph is not Transitive.\\
-Assume $ x_1 = 3, y_1 = 3.5 $, we have $ |3 - 3.5| < 1 $, so $ (3, 3.5
+\begin{proof}[Solution to Ch.11, \S 11.1,  Exercise 8] \ \\
+$$ |x - y| < 1 $$
+$$ -1 < x - y < 1 $$
+$$ x + 1 > y > x - 1 $$
+$$ y \in \mathbb{Z} $$
+$$ y = x $$
+The graph is transitive, because for every $ x \in \mathbb{Z} $, there is a relation $ (x, y) \in \mathbb{R} $, where $ y = x $. \\
+The graph only contains self-to-self relations, so it is not Symmetric or Transitive.
+
 
 \end{proof}
 
