@@ -1,0 +1,2 @@
+\contentsline {section}{\tocsection {}{}{Chapter 11 Section 11.3}}{1}{section*.2}% 
+\contentsline {subsection}{\tocsubsection {}{}{Ch.11, \S 11.3, Exercise 2}}{1}{section*.3}% 

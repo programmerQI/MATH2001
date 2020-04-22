@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT CLASS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{amsart}
+%\documentclass[draft, 12pt]{amsart}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STANDARD PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb,amsmath,amsthm,amscd,mathrsfs,graphicx, color}
+\usepackage[cmtip,all,matrix,arrow,tips,curve]{xy}
+\usepackage[notref,notcite]{showkeys}
+%\usepackage[colorlinks]{hyperref}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks=true,citecolor=OliveGreen,linkcolor=BrickRed,urlcolor=BlueViolet}
+\usepackage[active]{srcltx}
+\usepackage{mathpazo}
+\usepackage{setspace}\doublespacing 
+%Double space, and make it easier for the grader to grade your homework.
+%\usepackage{fullpage} 
+%Use wide margins, and make it easier for the grader to grade your homework.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TIKZ FOR GRAPHING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz,pgfplots}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 		ANSWER BOXES 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \setlength\fboxsep{.3cm}
+\setlength\fboxrule{.05cm}
+
+\newcommand*{\boxedcolor}{red}
+\makeatletter
+\renewcommand{\boxed}[1]{\textcolor{\boxedcolor}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedred}[1]{\textcolor{red}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedblue}[1]{\textcolor{blue}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THEOREM ENVIRONMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\numberwithin{equation}{section}
+\newtheorem{teo}{Theorem}[section]
+\newtheorem{pro}[teo]{Proposition}
+\newtheorem{lem}[teo]{Lemma}
+\newtheorem{cor}[teo]{Corollary}
+\newtheorem{con}[teo]{Conjecture}
+\newtheorem{convention}[teo]{}
+
+
+
+\newtheorem{teoalpha}{Theorem}
+\renewcommand{\theteoalpha}{\Alph{teoalpha}}
+\newtheorem{proalpha}[teoalpha]{Proposition}
+\newtheorem{coralpha}[teoalpha]{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{dfn}[teo]{Definition}
+\newtheorem{exa}[teo]{Example}
+\newtheorem{que}[teo]{Question}
+
+\theoremstyle{remark}
+\newtheorem{rem}[teo]{Remark}
+\newtheorem{nte}[teo]{Note}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SOME CONDITIONALS FOR NOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Declare a new conditional
+\newif\ifnotes
+\notestrue 	% Show details
+%\notesfalse 	% Exclude details
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\marg}[1]{\normalsize{{\color{red}\footnote{{\color{blue}#1}}}{\marginpar[\vskip -.3cm {\color{BrickRed}\hfill\thefootnote$\implies$}]{\vskip -.3cm{ \color{BrickRed}$\impliedby$\thefootnote}}}}}
+
+\newcommand{\qc}[1]{\marg{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\begin{document}
+
+\bibliographystyle{amsalpha}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% AUTHOR INFO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\author[Casalaina]{Sebastian Casalaina}
+\address{University of Colorado, Department of Mathematics,  Campus Box 395,
+Boulder, CO 80309-0395}
+\email{casa@math.colorado.edu}
+\date{\today}
+%\thanks{I would like to take this opportunity to thank my class for their support.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE AND ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Homework 11]{Homework 11 \\ \ \\  MATH 2001}
+
+\begin{abstract} 
+This is the first homework assignment.  The problems are from Hammack \cite[Ch.~1, \S 1.1]{H13}:
+\begin{itemize}
+
+\item \textbf{Chapter 11}  
+\textbf{Section 11.3}, Exercises:  2, 4.
+
+\end{itemize}
+\end{abstract}
+
+
+\maketitle
+
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOMEWORK ASSIGNMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 1.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Chapter 11 Section 11.3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXERCISE 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Ch.11, \S 11.3,  Exercise 2}  List all the partitions of the set  $ A = /{a, b, c /} $.
+
+\begin{proof}[Solution to Ch.1, \S 1.1,  Exercise 2] 
+$$ \{ \{ a \}, \{ b \}, \{ c \} \} $$
+$$ \{ \{ a \}, \{ a, b \} \} $$
+$$ \{ \{ a, b \}, \{ c \} \} $$
+$$ \{ \{ a, b, c \} \} $$
+\end{proof}
+
+
+
+
+
+\ifnotes
+
+
+\else
+	This is not the full version.  This can be useful if there is scratch work you want to keep for yourself, but you do not want other people to see. 
+\fi
+
+
+
+
+\bibliography{templateHW}
+\end{document}
