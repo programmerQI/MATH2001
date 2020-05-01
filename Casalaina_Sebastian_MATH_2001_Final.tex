@@ -1,0 +1,475 @@
+\documentclass[addpoints]{exam}[14pt]
+\usepackage{fullpage}
+\usepackage{amssymb,color, amsmath,amsthm,amscd,mathrsfs,graphicx,mathpazo, enumerate,multicol,tabulary}
+\usepackage[cmtip,all]{xy}
+\usepackage[none]{hyphenat}
+\usepackage[dvipsnames]{xcolor}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CLASS/EXAM NUMBER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Keep these all in one place to prevent typos
+\newcommand{\CLASS}{Intro to Discrete Math}
+\newcommand{\NUMBER}{MATH 2001}
+\newcommand{\SEMESTER}{Spring 2020}
+\newcommand{\DATE}{Saturday May 2, 2020}
+\newcommand{\EXAM}{Final Exam}
+\newcommand{\DURATION}{Take Home Exam}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FORMATTING  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{headandfoot}
+\cfoot{Page \thepage\mbox{ of }\numpages} % page numbering
+%\header{\CLASS}{\EXAM}{\DATE}
+%\firstpageheader{\CLASS}{\EXAM}{\DATE}
+\setlength{\textheight}{9.25in} \setlength{\voffset}{-0.2in}
+\renewcommand{\thequestion}{\bfseries\arabic{question}} %BOLD QUESTION NUMBERS
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TIKZ STUFF FOR GRAPH TO RENDER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz,pgfplots}
+\pgfplotsset{samples=500} % Quality of render
+\usepgfplotslibrary{fillbetween}
+\usepackage{sidecap} % Side caption in figures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SCORE BOXES ON TEST PAGES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\newcounter{prb_num}
+\newcounter{prb_num_a}
+\newcommand{\prbbox}[1]
+{
+\stepcounter{prb_num}
+\setcounter{prb_num_a}{0}
+\vfill 
+\begin{flushright}
+\begin{tabular}{|l|} \hline 
+\arabic{prb_num} \hskip .2in \ \\  \\ \hline
+ #1\textnormal{  points}  \\
+ \hline   \end{tabular} 
+\end{flushright}
+\newpage 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% T/F BOXES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\prbboxtf}
+{
+\vskip .01cm
+\noindent  \begin{tabular}{r|}
+\textbf{T} \ \hskip .5 cm \  \textbf{F}\\
+\hline
+\end{tabular} 
+%\vskip .1 cm 
+\hskip .5 cm 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 		EQUATION BOXES 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% SIMPLE SOLUTION %%%%%%%%%%%
+ \setlength\fboxsep{.3cm}
+\setlength\fboxrule{.05cm}
+
+\newcommand*{\boxedcolor}{red}
+\makeatletter
+\renewcommand{\boxed}[1]{\textcolor{\boxedcolor}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedred}[1]{\textcolor{red}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+\makeatletter
+\newcommand{\boxedblue}[1]{\textcolor{blue}{%
+  \fbox{\normalcolor\m@th$\displaystyle#1$}}}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COVER PAGE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{coverpages}
+\centerline{\bf\Huge  \EXAM}
+\vskip 1cm 
+\centerline{\bf\Large \CLASS}
+\vskip .2 cm 
+\centerline{\bf\Large \NUMBER}
+\vskip .2 cm 
+\centerline{\bf\Large \SEMESTER}
+\vskip .2 cm 
+\centerline{\large \DATE}
+
+\vfill
+\vskip0.2in
+\noindent{\large \textsc{PRINT your name:}} 
+\hrulefill
+\vfill
+\gradetable[v][questions]
+
+\vfill 
+\begin{itemize}
+\item For the exam, you may use only the textbook, your lecture notes, your homework, and your previous exams, from this course.  
+
+\item You may not use any other resources whatsoever.
+
+\item You may not discuss the exam with anyone, in any way, under any circumstances.
+
+\item \textbf{You must explain your answers, and you will be graded on the clarity of your solutions.}
+
+\item You must write your solutions in \LaTeX, and you must upload your .pdf \emph{and} .tex files to canvas.
+
+
+
+\item The exam is due at 11:59 PM Saturday May 2, 2020. 
+%, and the exam is \numpoints {} points.
+\end{itemize}
+\vfill
+\end{coverpages}
+\vfill\eject
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN EXAM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{questions}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ 
+ 
+ \question[10] 
+ 
+\textbf{True or false.}  
+
+\begin{quote}
+\emph{Let $f:A\to B$ and $g:B\to C$ be maps of sets.  If $g\circ f$ is injective, then  $g$  is injective.
+}
+\end{quote}
+\vskip .1 cm 
+\textbf{  If true, give a proof.  If false, provide a counter example.}
+
+
+
+
+
+
+
+
+
+
+
+ \prbbox{10}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\question[10]
+\textbf{True or False.}  
+\begin{quote}
+\emph{
+Suppose $f:A\to B$ is a surjective map of sets.  Then there  exists an injective map of sets $s:B\to A$.  
+}
+\end{quote}
+\textbf{  If true, give a proof.  If false, provide a counter example.}
+
+
+
+
+
+
+
+
+
+\prbbox{10}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\question[10]
+\textbf{True or False.}
+
+\begin{quote}
+  \emph{A map of sets $f:A\to B$ is surjective if and only if for all maps  of sets $g_1:B\to C$ and $g_2:B\to C$, we have that  $g_1\circ f=g_2\circ f$ implies $g_1=g_2$.} 
+  \end{quote}
+ \vskip .1 cm 
+\textbf{  If true, give a proof.  If false, provide a counter example.}
+
+
+
+
+
+
+
+
+
+\prbbox{10}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\question   Define a relation on $\mathbb N\times \mathbb N$ by the rule that for all $(a,b)$, $(c,d) \in \mathbb N\times \mathbb N$, 
+$$
+(a,b)\sim (c,d)  \iff a+d=b+c.
+$$ 
+
+
+\begin{parts}
+
+
+\part[5]  \textbf{What is this relation as a subset of $(\mathbb N\times \mathbb N)\times (\mathbb N\times \mathbb N)$?}
+
+\vspace{\stretch{1}}
+
+
+
+
+
+\part[5] \textbf{Show that the relation is an equivalence relation.}  
+
+\vspace{\stretch{1}}
+
+
+
+
+
+\end{parts}
+
+
+
+
+
+
+
+\prbbox{10}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\question[10]
+\textbf{True or False.}   Let $Z=(\mathbb N\times \mathbb N)/\sim$ be the set of equivalence classes  in $\mathbb N\times \mathbb N$ for the equivalence relation given in the previous problem.  
+
+\begin{quote}
+\emph{There is a bijective map of sets
+$$
+f:Z\longrightarrow \mathbb Z
+$$
+given by the rule $[(a,b)]\mapsto a-b$.  
+}
+\end{quote}
+\textbf{You must prove that the statement in italics is true or that it is false.}
+
+
+
+
+
+
+
+
+
+\prbbox{10}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\question[10]
+
+
+
+\textbf{True of False.}  Let $S$ be a set and   let $\mathscr C\subseteq \mathscr P(S)$ be a collection of subsets  of $S$ with the following property:   For any set $I$, if for each $i\in I$ we are given a set 
+  $C_i\in \mathscr C$, and for all $i,j\in I$ we have $C_i\subseteq C_j$ or $C_j\subseteq C_i$, then  $\bigcup_{i\in I}C_i\in \mathscr C$.    
+\begin{quote}
+\emph{
+There exists $C\in \mathscr C$ such that for all $C'\in \mathscr C$, if $C\subseteq C'$, then $C=C'$.
+}
+\end{quote}
+\vskip .1 cm 
+\textbf{If the statement in italics is true, give a proof.  Otherwise,  provide a counter example.}
+\vskip .2 cm \noindent [Hint: Think in terms of POSETs.]
+
+
+
+
+
+
+
+
+
+\prbbox{10}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\question[10]
+For an incidence plane $(\Pi,\Lambda)$, given a line $\ell\in \Lambda$ and a point $P\in \Pi$ such that $P\notin\ell$, consider the following properties:
+
+\begin{quote}
+
+
+\begin{enumerate}
+\item[(P0)] There \emph{does not exist} $\ell'\in \Lambda$ such that $P\in \ell'$ and $\ell'\cap \ell = \emptyset$.
+
+\item[(P1)] There \emph{exists exactly one} $\ell'\in \Lambda$ such that $P\in \ell'$ and $\ell'\cap \ell = \emptyset$.
+
+\item[(P2)] There \emph{exists at least two}  $\ell'\in \Lambda$ such that $P\in \ell'$ and $\ell'\cap \ell = \emptyset$.
+
+\end{enumerate}
+
+\end{quote}
+
+
+\textbf{Find an example of an incidence plane  $(\Pi,\Lambda)$ with exactly five points, such that for each of the properties above there exists a point and a line satisfying that property}.  In other words,  find a single   incidence plane $(\Pi,\Lambda)$ with $|\Pi|=5$, such that for $i=0,1,2$, there exists  $\ell_i\in \Lambda$  and $P_i\in \Pi$ with $P_i\notin \ell_i$, such that  $\ell_i$ and $P_i$ satisfy property (P$i$).
+
+
+
+
+
+
+
+\prbbox{10}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\question
+A polynomial in one variable, $x$,  with rational coefficients can, by definition, be written in the form
+$$
+p(x)= a_0+a_1x+a_2x^2+\cdots + a_dx^d
+$$
+where $a_0,a_1,\dots,a_d\in \mathbb Q$, and $d$ is some nonnegative integer.  If in the expression above for $p(x)$ we have $a_d\ne 0$, then we say $p(x)$ has degree $d$.  
+
+\vskip .2 cm 
+We denote by $\mathbb Q[x]$ the set of all polynomials in $x$ with rational coefficients.  Denote by $\mathbb Q[x]_d\subseteq \mathbb Q[x]$ the subset consisting of those polynomials that have degree at most $d$, union  the set containing the zero polynomial (the zero polynomial does not have a degree using our definition above). 
+
+\begin{parts}
+\part[5]  Let  $d$ be a nonnegative integer.  \textbf{Show that  the set $\mathbb Q[x]_d$ is countable}.  
+
+\vskip .2 cm 
+[Hint: Show that $\mathbb Q[x]_d$ is in bijection with $\mathbb Q^{d+1}$.]
+
+
+
+\vspace{\stretch{2}}
+
+
+
+
+
+\part[5] \textbf{True or False.} 
+ \emph{The set $\mathbb Q[x]$ is countable.}  
+\vskip .1 cm 
+\textbf{You must prove that the statement in italics is true or that it is false.}
+
+
+
+
+
+\vspace{\stretch{1}}
+
+
+\end{parts}
+
+
+
+
+\prbbox{10}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{questions}
+\end{document}			
