@@ -4,6 +4,7 @@
 \usepackage[cmtip,all]{xy}
 \usepackage[none]{hyphenat}
 \usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
 
 
 
@@ -174,12 +175,53 @@
 \vskip .1 cm 
 \textbf{  If true, give a proof.  If false, provide a counter example.}
 
+\begin{proof} \ \\
+\doublespacing
+False.\\
+\textit{Example:}
+
+\usetikzlibrary{positioning,shapes,fit,arrows}
+\definecolor{myblue}{RGB}{56,94,141}
+\begin{tikzpicture}[line width=1pt,>=latex]
+\sffamily
+
+\node (aux1) {};
+\node[below=of aux1] (a1) {a};
+\node[below=0.5cm of a1] (a2) {b};
+\node[below=0.5cm of a2] (aux2) {};
+
+\node[right=4cm of aux1] (aux3) {};
+\node[below=0.5cm of aux3] (b1) {1};
+\node[below=0.5cm of b1] (b2) {2};
+\node[below=0.5cm of b2] (b3) {3};
+\node[below=0.5cm of b3] (aux4) {};
+
+\node[right=8cm of aux1] (aux5) {};
+\node[below= 0.5cm of aux5] (c1) {q};
+\node[below= 0.5cm of c1] (c2) {w};
+\node[below= 0.5cm of c2] (aux6) {};
+
+\node[shape=ellipse,draw=myblue,minimum size=3cm,fit={(aux1) (aux2)}] {};
+\node[shape=ellipse,draw=myblue,minimum size=3cm,fit={(aux3) (aux4)}] {};
+\node[shape=ellipse,draw=myblue,minimum size=3cm,fit={(aux5) (aux6)}] {};
+
+\node[below=1.5cm of aux2,font=\color{myblue}\Large\bfseries] {A};
+\node[below=1.5cm of aux4,font=\color{myblue}\Large\bfseries] {B};
+\node[below=1.5cm of aux6,font=\color{myblue}\Large\bfseries] {C};
+
+\draw[->,myblue] (a1) -- (b1.170);
+%\draw[->,myblue] (a1) -- (b2.170);
+\draw[->,myblue] (a2) -- (b2.170);
+\draw[->,myblue] (b1) -- (c1.170);
+\draw[->,myblue] (b2) -- (c2.170);
+\draw[->,myblue] (b3) -- (c2.170);
+\end{tikzpicture}
+
+$ A = \{a, b\}, B = \{1, 2, 3\}, C = \{q, w\} $\\
+The map $ g \circ f $ is injective, but $ g $ is not.
 
 
-
-
-
-
+\end{proof}
 
 
 
@@ -203,12 +245,11 @@ Suppose $f:A\to B$ is a surjective map of sets.  Then there  exists an injective
 \end{quote}
 \textbf{  If true, give a proof.  If false, provide a counter example.}
 
-
-
-
-
-
-
+\begin{proof} \ \\
+\doublespacing
+True.\\
+Assume $ f: A \rightarrow B $ is a surjective map of sets. Then for all $ b \in B $ we have $ b = f(a), a \in A $. Assume $ c = f(a), d = f(b) $ where $ c, d \in B $ and $ a, b \in A $. Then there is a map of sets $ s : B \rightarrow A $ which $ s = f^{-1} $. Then we have $ s(c) = s(f(a)) = a $ and $ s(d) = s(f(b)) = b $. Assume $ a = b $, then we have $ f(a) = f(b) $, it follows that $ c = d $. There for $ s $ is injective.
+\end{proof}
 
 
 \prbbox{10}
@@ -236,11 +277,16 @@ Suppose $f:A\to B$ is a surjective map of sets.  Then there  exists an injective
 \textbf{  If true, give a proof.  If false, provide a counter example.}
 
 
+\begin{proof}
+\doublespacing
+\ \\
+True. \\
+\textbf{Step1:} Prove if $ f: A \rightarrow B $ is surjective, then for all $ g_1: B \rightarrow C $ and $ g_2: B \rightarrow C $ we have that $ g_1 \circ f = g_2 \circ f \implies g_1 = g_2 $.\\
+(contrapositive) Assume $ g_1 : B \rightarrow C, g_2 : B \rightarrow C $ and $ g_1 \neq g_2 $, then there exist $ g_1(b) \neq g_2(b), b \in B $ by definition. Suppose $ f: A \rightarrow B $ is surjective, then $ b = f(a) $ for some $ a \in A $. Thus we have $ g_1(f(a)) \neq g_2(f(a)) $, in other word $ g_1 \circ f \neq g_2 \circ f $.(contrapositive proof)\\ \\
+\textbf{Step2:} Prove if for all maps of set $ g_1 : B \rightarrow C $ and $ g_2 : B \rightarrow C $, we have $ g_1 \circ f = g_2 \circ f $  implies $ g_1 = g_2 $, then $ f : A \rightarrow B $ is surjective. \\
+(contrapositive) Assume a map of sets $ f : A \rightarrow B $. Suppose there exist $ g_1 : B \rightarrow C $ and $ g_2 : B \rightarrow C $ such that $ g_1 \circ f = g_2 \circ f $ and $ g_1 \neq g_2 $. We have $ g_1(f(a)) = g_2(f(a)) $ for all $ a \in A $. We also get $ g_1(b) \neq g_2(b) $ for some $ b \in B $. Thus it follows that $ b \neq f(a) $. Therefor $ f $ is not surjective by pigeonhole principle.
 
-
-
-
-
+\end{proof}
 
 
 \prbbox{10}
@@ -277,19 +323,25 @@ $$
 
 \part[5]  \textbf{What is this relation as a subset of $(\mathbb N\times \mathbb N)\times (\mathbb N\times \mathbb N)$?}
 
+\begin{proof}
+\doublespacing
+
+$$ \{ ((a, b), (a, b)) | a, b, c, d \in N , a + d = b + c \} \subseteq (\mathbb{N} \times \mathbb{N}) \times (\mathbb{N} \times \mathbb{N}) $$
+
+\end{proof}
+
 \vspace{\stretch{1}}
-
-
-
-
 
 \part[5] \textbf{Show that the relation is an equivalence relation.}  
 
+\begin{proof}
+\doublespacing
+
+Assume $ (a, b), (c, d) \in \mathbb{N} \times \mathbb{N} $ and $ (a, b) \sim (c, d) $. Then we have $ a + d = b + c $ by definition, so $ c + b = d + a $. It follows that $ (c, d) \sim (a, b) $. Thus the relation is symetric. Suppose $ c = a $ and $ b = d $, then we have $ a + b = b + a $, it follows that $ (a, b) \sim (a, b) $. Thus it is reflexive. Assume $ (c, d) \sim (e, f) $, then we get $ c + f = d + e $, thus $ d - c = f - e $. We also get $ d - c = b - a $ from previous step, so $ f - e = b - a $, then $ a + f = b + e $, it follows that $ (a, b) \sim (e, f) $ by definition. Therefor the relation is transitive.
+
 \vspace{\stretch{1}}
 
-
-
-
+\end{proof}
 
 \end{parts}
 
@@ -320,11 +372,13 @@ given by the rule $[(a,b)]\mapsto a-b$.
 \textbf{You must prove that the statement in italics is true or that it is false.}
 
 
+\begin{proof}
+\doublespacing
 
+Ture \\
+Assume the map of sets $ f : Z \rightarrow \mathbb{Z} $ where $ Z = ( \mathbb{N} \times \mathbb{N} ) / \sim $ is the set of equivalence classes, such that $ f( [ (a, b) ] ) = a - b, [ (a, b) ] \in Z $. Suppose the equivalence classes $ [ (a, b) ] $ and $ [ (c, d) ] $, such that $ f( [ (a, b) ] ) = f( [ (c, d) ] ) $, we have that $ a - b = c - d $, so $ a + d = b + c $, it follows that $ (a, b) \sim (c, d) $ and $ [ (a, b) ] = [ (c, d) ] $. There for $ f $ is injective. For every $ k \in \mathbb{Z} $, we can find a equivalence class $ [ (m + k, m) ] $, such that $ f( [ (m + k, m) ] ) = m + k - m = k $. Therefor $ f $ is surjective.
 
-
-
-
+\end{proof}
 
 
 \prbbox{10}
@@ -355,9 +409,13 @@ There exists $C\in \mathscr C$ such that for all $C'\in \mathscr C$, if $C\subse
 
 
 
+\begin{proof}
+\doublespacing
+True \\
+Assume set $ I $ is the index set of $ \mathscr{C} $. Let $ C_i \in \mathscr{C} $, we have $ \{ C_i | i \in I \} $ are the elements of $ \mathscr{C} $. Suppose for all $ i, j \in I $ we have $ C_i \subseteq C_j $ or $ C_j \subseteq C_i $ and $ \bigcup_{i \in I} C_i \in \mathscr{C} $, then we get the partilly order relation $ R $, which $ aRb \Longleftrightarrow a \subseteq b $, and the poset $ (\mathscr{C}, \subseteq) $. Thus there is a element $ C \in \mathscr{C} $ such that $ C' \subseteq C $ for all $ C' \in \mathscr{C} $ by definition of poset. Suppose $ C \subseteq C'$, then we have $ C = C'$.
 
 
-
+\end{proof}
 
 
 
